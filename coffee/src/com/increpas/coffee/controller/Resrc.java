@@ -8,7 +8,7 @@ import javax.servlet.annotation.*;
 public class Resrc extends HttpServlet {
 	
 	public void service(HttpServletRequest req, HttpServletResponse resp) {
-		String url = req.getRequestURI();
+		String url = req.getRequestURI(); // 도메인 이후의 요청 내용 추출
 		System.out.println("url : " + url);
 		// ==> 요청 파일 경로 추출한다. 
 		/*

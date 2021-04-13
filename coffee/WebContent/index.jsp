@@ -8,7 +8,7 @@
 </head>
 <body>
 	<center>
-		<h1 style="background-color: orange; padding: 10px;">여기는 테스트 페이지!</h1>
+		<h1 style="background-color: orange; padding: 10px;">여기는 대문 테스트 페이지!</h1>
 	</center>
 </body>
 </html>
