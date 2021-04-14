@@ -18,8 +18,8 @@
 <%!
 	// 여기에 만들어지는 변수는 
 	// 클래스블럭 바로 아래에서 만들어지는 변수 즉 전역변수(멤버변수)가된다.
-	ArrayList<String> list = new ArrayList<String>();
-	ArrayList<String> name = new ArrayList<String>();
+	ArrayList<String> list;
+	ArrayList<String> name;
 	
 	public void setList(){
 		list.add("w3-red");
@@ -48,7 +48,8 @@
 		list.add("w3-khaki");
 		list.add("w3-pale-blue");
 		list.add("w3-light-blue");
-		
+	
+		name = new ArrayList<String>();
 		name.add("김기은");
 		name.add("곽채원");
 		name.add("김유진");
@@ -65,12 +66,18 @@
 	String first = "은석";
 	String last = "전";
 	// 함수를 호출해서 변수에 데이터를 채워주자.
+	list = new ArrayList<String>();
+	name = new ArrayList<String>();
 	setList();
 %>
 	<div class="w3-content mxw600 w3-center w3-margin-top">
 		<h1 class="w3-margin-top w3-margin-bottom w3-deep-orange w3-padding w3-card-4">우 리 반</h1>
-		<div class="w3-button <%= sColor %>"><%= (last + first) %></div>
-	<% for(int i = 0 ; i < name.size() ; i++ ){ %>
+		<div class="w3-button <%= sColor %>"><%= "전은석" %></div>
+		<!-- 반복문 처리 -->
+	<% 
+		int len = name.size();
+		for(int i = 0 ; i < len ; i++ ){ %>
+		<%-- 반복되서 만들어질 태그들... --%>
 		<div class="w3-button <%= list.get(i) %>"><%= name.get(i) %></div>
 	<% } %>
 	</div>
