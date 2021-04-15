@@ -12,7 +12,8 @@
 </head>
 <body>
 <%
-//	response.sendRedirect("requestPage.jsp");
+	String url = "requestPage.jsp?id=" + request.getParameter("id") + "&pw=" + request.getParameter("pw");
+	response.sendRedirect(url);
 %>
 <form method="post" action="requestPage.jsp" id="frm" name="frm">
 	<input type="hidden" name="id" value='<%= request.getParameter("id") %>'>
@@ -25,7 +26,7 @@
 <script type="text/javascript">
 //	document.getElementById('frm').submit();
 
-	location.href = 'requestPage.jsp?id=<%= request.getParameter("id") %>&pw=<%= request.getParameter("pw") %>';
+//	location.href = 'requestPage.jsp?id=<%= request.getParameter("id") %>&pw=<%= request.getParameter("pw") %>';
 </script>
 </body>
 </html>
