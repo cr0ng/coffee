@@ -19,8 +19,8 @@
 뷰		 : 	redirect ] /html/j04/requestPage.jsp
 
 # requestPage 요청
-요청내용 : http://localhost/cafe/html/j04/redirectPage.jsp
+요청내용 : http://localhost/cafe/html/j04/requestPage.jsp
 파라미터 : id, pw
 컨트롤러 : 무
-뷰		 : 	redirect ] /html/j04/requestPage.jsp
+뷰		 : /html/j04/requestPage.jsp
 
